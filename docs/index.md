@@ -3,10 +3,10 @@
 Are you sharing data via the [OSDF](https://osg-htc.org/services/osdf)?
 This website will help guide you on how to:
 
-* Use [Pelican](https://pelicanplatform.org), the software powering the OSDF
-* Upload and download data via the OSDF
-* Sync your dataset for sharing via the OSDF
-* Give access to your collaborators
+* Use [Pelican](https://pelicanplatform.org), the software powering the OSDF. [Guide :material-arrow-right:](pelican-client)
+* Upload and download data via the OSDF. [Guide :material-arrow-right:](upload-download)
+* Sync your dataset for sharing via the OSDF. [Guide :material-arrow-right:](sync-dataset)
+* Give access to your collaborators. [Guide :material-arrow-right:](collaborators)
 
 ??? info "Are you an OSPool user?"
 
