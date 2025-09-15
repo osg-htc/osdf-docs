@@ -40,60 +40,22 @@ Then navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 
 ### Adding in the Documentation
 
-Documentation is hosted in the ```/docs/material``` directory. 
-
-Each category of documentation is in a subdirectory at location ```/docs/material/<category>```.
-
-When you add new documentation you should name the file like so: ```part<x>-ex<y>-<name>.md```
+Documentation is hosted in the ```/docs``` directory. 
 
 Documentation should be referenced in two locations:
 
-#### /docs/material/index.md
+#### /docs/index.md
 
-This is an overview page that contains all documentation and each category's files.
-
-Use format below when adding to this page
-```markdown
-## <category>
-
-([PDF](<category>/files/<filename>.pdf),
-[PowerPoint](<category>/files/<filename>.pptx))
-
-### <category> Exercises: 
-
-- [Exercise 1.1: <exercise-name>](<category>/part1-ex1-<exercise-name>.md)
-- [Exercise 1.2: <exercise-name>](<category>/part1-ex2-<exercise-name>.md)
-```
+This is an overview page.
         
 #### [/mkdocs.yml](https://github.com/osg-htc/user-school-2025/blob/main/mkdocs.yml)
 
-This files generates the website navigation. You should not include the category files in this navigation.
+This files generates the website navigation.
 
 If you are adding materials it will look like so:
 ```yaml
 nav:
-  - Materials:
-    - <Category0> Exercises:
-      - Exercise 1.1:               materials/<category0>/part1-ex1-<exercise-name>.md
-      - Exercise 1.2:               materials/<category0>/part1-ex2-<exercise-name>.md
-    - <Category1> Exercises:
-      - Exercise 1.1:               materials/<category1>/part1-ex1-<exercise-name>.md
-      - Exercise 1.2:               materials/<category1>/part1-ex2-<exercise-name>.md
+  - Home: index.md
+  - Getting started: gettingstarted.md
 ```
 
-**Note:** This is generated in order so the order of the categories should correspond to the material overview page. 
-
-### Adding in Additional Files
-
-Files corresponding to each category should be in the subdirectory at location ```/docs/material/<category>/files/```.
-
-Additionally all files should be referenced in the ```/docs/material/index.md``` file using format:
-```markdown
-## <category>
-
-([PDF](<category>/files/<filename>.pdf),
-[PowerPoint](<category>/files/<filename>.pptx))
-
-### <category> Exercises: 
- - ...
-```
