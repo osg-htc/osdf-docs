@@ -3,5 +3,5 @@ span.hll {
 }
 
 button.md-clipboard.md-icon {
-    display: none;
+    color: var(--md-default-fg-color--light)
 }
