@@ -21,10 +21,19 @@ markdown_extensions:
   - toc:
       permalink: True
   - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
 
 extra_css:
   - stylesheets/code-highlight.css
   - stylesheets/osg.css
 
 nav:
-  - Home:                           index.md
+  - Home: index.md
+  - Set up Pelican: pelican-client.md
+  - Upload/download data: upload-download.md
+  - Sync your dataset: sync-dataset.md
+  - Collaborator access: collaborators.md
+
