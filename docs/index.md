@@ -4,7 +4,7 @@ Are you sharing data via the [OSDF](https://osg-htc.org/services/osdf)?
 This website will help guide you on how to:
 
 * Use [Pelican](https://pelicanplatform.org), the software powering the OSDF. [Guide :material-arrow-right:](pelican-client.md)
-* Upload and download data via the OSDF. [Guide :material-arrow-right:](upload-download.md)
+* Access data via the OSDF. [Guide :material-arrow-right:](upload-download.md)
 * Sync your dataset for sharing via the OSDF. [Guide :material-arrow-right:](sync-dataset.md)
 * Give access to your collaborators. [Guide :material-arrow-right:](collaborators.md)
 
