@@ -33,7 +33,9 @@ extra_css:
 nav:
   - Home: index.md
   - Set up Pelican: pelican-client.md
-  - Access data: access-data.md
+  - Upload data: upload-data.md
+  - Download data: download-data.md
   - Sync your dataset: sync-dataset.md
   - Collaborator access: collaborators.md
+  - Concepts: concepts.md
 
