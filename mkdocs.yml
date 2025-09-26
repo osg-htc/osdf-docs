@@ -10,6 +10,8 @@ theme:
     admonition:
       halt: material/hand-back-left
       pro-tip: material/brain
+  features:
+    - navigation.footer
 
 markdown_extensions:
   - attr_list
