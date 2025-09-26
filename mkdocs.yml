@@ -10,6 +10,8 @@ theme:
     admonition:
       halt: material/hand-back-left
       pro-tip: material/brain
+  features:
+    - navigation.footer
 
 markdown_extensions:
   - attr_list
@@ -33,7 +35,9 @@ extra_css:
 nav:
   - Home: index.md
   - Set up Pelican: pelican-client.md
-  - Upload/download data: upload-download.md
+  - Upload data: upload-data.md
+  - Download data: download-data.md
   - Sync your dataset: sync-dataset.md
   - Collaborator access: collaborators.md
+  - Concepts: concepts.md
 
