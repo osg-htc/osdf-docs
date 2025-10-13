@@ -226,3 +226,23 @@ depending on how your device is set up.
 
 If the local credential has expired, then you will have to repeat the CILogon authentication the next time you try to `put`.
 
+### Caching
+
+The OSDF uses an extensive system of caches to distribute the load of repeated downloads.
+In order for this system to work, **the OSDF assumes objects are immutable**.
+
+While you technically can overwrite an object on upload, the danger is that the object in the data storage no longer matches the object in the cache.
+This leads to "undefined" behavior in the OSDF system.
+
+??? note "When there is a mismatch"
+
+    If there is a mismatch between an object in the original data storage and in the cache, then when the client downloads the object it may receive:
+
+    * the old version of the object (from the cache)
+    * the new version of the object (from the origin)
+    * or a mix inbetween! (the cache began updating during the transfer)
+
+    A long term goal for the underlying Pelican software is to address this issue.
+
+For more information on caching, see this section in the [Concepts guide](concepts.md#caching-and-immutability).
+
