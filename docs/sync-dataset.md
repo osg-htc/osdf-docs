@@ -63,17 +63,17 @@ On your local device, create the following directory tree:
 
 ```
 sync-test.01/
-├── nested.01
+├── nested/
 │   └── nested.txt
-└── sync-test.01.txt
+└── test.txt
 ```
 
 You can recreate this structure by copying and running the following commands (Linux/Mac):
 
 ```{ .bash .copy }
-mkdir -p sync-test.01/nested.01
-echo "First file in the sync test" > sync-test.01/sync-test.01.txt
-echo "Second file (nested) in the sync test" > sync-test.01/nested.01/nested.txt
+mkdir -p sync-test.01/nested
+echo "First file in the sync test" > sync-test.01/test.txt
+echo "Second file (nested) in the sync test" > sync-test.01/nested/nested.txt
 ```
 
 If using Windows PowerShell, use the File Explorer to create the directories and Notepad or other text editor to create the files.
@@ -90,7 +90,7 @@ If using Windows PowerShell, use the File Explorer to create the directories and
     For more information, see the section on [Caching and immutability](concepts.md#caching-and-immutability).
 
 Next, identify the OSDF address that you want to make the **contents** of the local directory available at. 
-We recommend using `osdf:///YOUR_NAMESPACE/test/`.
+We recommend using `osdf:///YOUR_NAMESPACE/test/sync-test.01`.
 
 ### Test upload sync
 
@@ -98,8 +98,10 @@ Make sure that your terminal is in the directory that contains the `sync-test.01
 Then run
 
 ```{ .term .copy }
-pelican object sync sync-test.01 osdf:///YOUR_NAMESPACE/test/
+pelican object sync sync-test.01 osdf:///YOUR_NAMESPACE/test/sync-test.01
 ```
+
+Remember that the `sync` command will upload the **contents** of the local directory - if you want to have the local directory name `sync-test.01` in the final OSDF address, then you need to include it in the OSDF address you are uploading to.
 
 You will be prompted to authenticate, just like you did in the [Upload data test](upload-data.md#authenticate-upload).
 Once you've secured the necessary authorization, the upload should be brief.
@@ -119,33 +121,28 @@ To confirm that the upload was successful, check that the objects can now be lis
 First, run this command to check the available objects under the OSDF address you provided for the sync command:
 
 ```{ .term .copy }
-pelican object ls -l osdf:///YOUR_NAMESPACE/test
+pelican object ls -l osdf:///YOUR_NAMESPACE/test/sync-test.01
 ```
 
-You should see two new items in this listing: `sync-test.01.txt` and `sync-test.01.nested`.
+You should see two new items in this listing: `test.txt` and `nested`.
 If there are no other objects under your `test` prefix, the output would look like this:
 
 ```{ .term }
-/YOUR_NAMESPACE/test/nested.01           0   2025-10-10 21:10:32
-/YOUR_NAMESPACE/test/sync-test.01.txt   28   2025-10-10 21:10:32
+/YOUR_NAMESPACE/test/sync-test.01/nested      0   2025-10-10 21:10:32
+/YOUR_NAMESPACE/test/sync-test.01/test.txt   28   2025-10-10 21:10:32
 ```
 
-!!! note
-
-    The OSDF addresses listed do **not** include the name of the local directory `sync-test.01` in the prefix.
-    Again, this is because only the **contents** of the directory were uploaded and given addresses.
-
-The entry for `nested.01` lists 0 bytes (middle column), which is an indication that this is not an object but rather an extension of the OSDF address.
+The entry for `nested` lists 0 bytes (middle column), which is an indication that this is not an object but rather an extension of the OSDF address.
 Take a look at the objects available under the nested address with 
 
 ```{ .term .copy }
-pelican object ls -l osdf:///YOUR_NAMESPACE/test/nested.01
+pelican object ls -l osdf:///YOUR_NAMESPACE/test/sync-test.01/nested
 ```
 
 This time, you should only see one entry listed corresponding to `nested.txt`:
 
 ```{ .term }
-/YOUR_NAMESPACE/test/nested.01/nested.txt   34   2025-10-10 21:10:32
+/YOUR_NAMESPACE/test/sync-test.01/nested/nested.txt   34   2025-10-10 21:10:32
 ```
 
 !!! tip
@@ -164,9 +161,87 @@ pelican object sync osdf:///YOUR_NAMESPACE/some_prefix NEW_LOCAL_DIRECTORY
 !!! danger "Careful!"
 
     The sync command will **overwrite** any local objects that have the **same name** but **different contents** when downloading!
+    
+    Local objects with different names will be unaffected, even if inside of a sub-directory created by the sync command.
 
 Like with [downloading a single object](download-data.md), the OSDF address you are trying to access may require that you authenticate your identity to provide the necessary authorization for downloading the data.
 
+### Setup test download sync
+
+On your local device, create a new empty directory and move into it:
+
+```{ .term .copy }
+mkdir sync-download-test
+cd sync-download-test
+```
+
+The instructions below assume that the namespace has the addresses created in the [section above](#using-the-sync-command-to-upload-data): `osdf:///YOUR_NAMESPACE/test/sync-test.01`.
+
+**If your namespace does not have this address**, then 
+
+* If you have upload permissions, we recommend that you first complete the [exercises above](#using-the-sync-command-to-upload-data)!
+
+* If you do **not** have upload permissions, we recommend that you first finish reading this guide.
+  Then try to apply your understanding to a "small" sync of data from your namespace.
+
 ### Test download sync
 
+Inside the empty directory, run the following command: 
+
+```{ .term .copy }
+pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./
+```
+
+You may be prompted to authenticate, just like you did in the [Download data test](download-data.md#authenticate-upload).
+The download itself should be brief.
+
+??? tip "In case of errors"
+
+    If the download of one of the objects encounters an error, the corresponding error message should be printed and in most cases the client will continue with download the other remaining objects.
+    
+    If you try the sync command again, it should skip the objects that were successfully downloaded.
+
+    For assistance in troubleshooting an error, consider reaching out to <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.
+
+### Confirm downloads
+
+After the `sync` command finishes, list the contents of your current directory with
+
+```{ .term .copy }
+ls
+```
+
+You should see the file `test.txt` and a directory `nested`. 
+Again, this is because the `sync` command transfers the **contents** of the address you specified.
+
+??? tip "Creating `sync-test.01`"
+
+    If you want the sync command to put the contents into a new local directory `sync-test.01`, then you can use this command instead:
+
+    ```{ .term .copy}
+    pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./sync-test.01
+    ```
+
+Using your terminal or your device's file explore, confirm that the `sync` command created the following structure, files, and contents:
+
+```
+./
+├── nested/
+│   └── nested.txt   # Contains "First file in the sync test"
+└── test.txt         # Contains "Second file (nested) in the sync test"
+```
+
+??? example "Overwriting local objects"
+
+    As warned above, the sync command will overwrite any local objects with the same name/path as the object you are downloading.
+    To see this in action, try the following:
+
+    1. Edit the contents of `sync-download-test/test.txt`  using your terminal or device's text editor.
+    2. Create or copy files to `sync-download-test/test2.txt` and `sync-download-test/nested/nested2.txt`.
+    3. In the parent `sync-download-test` directory, rerun the same `pelican object sync` command that you did in [Test download sync](#test-download-sync).
+    
+    Now check the results:
+    
+    * Did your changes to `test.txt` persist?
+    * Were your new files `test2.txt` and `nested2.txt` affected?
 
