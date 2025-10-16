@@ -39,7 +39,7 @@ which should be the case if you are the manager of a custom namespace.
         done several successful authentications. It can be tricky to "undo" this box, so it is
         best to make sure everything is working first!
 
-    ![Login to CILogon in browser](/assets/osdf-upload-cilogon.png)
+    ![Login to CILogon in browser](assets/osdf-upload-cilogon.png)
 
 4. Sign in to your selected identity provider as you normally would.
     You may be automatically logged in, depending on your browser settings.

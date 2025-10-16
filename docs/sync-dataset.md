@@ -192,7 +192,7 @@ Inside the empty directory, run the following command:
 pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./
 ```
 
-You may be prompted to authenticate, just like you did in the [Download data test](download-data.md#authenticate-upload).
+You may be prompted to authenticate, just like you did in the [Download data test](download-data.md#authenticate-download).
 The download itself should be brief.
 
 ??? tip "In case of errors"
