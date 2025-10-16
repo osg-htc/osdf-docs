@@ -78,7 +78,7 @@ echo "Second file (nested) in the sync test" > sync-test.01/nested/nested.txt
 
 If using Windows PowerShell, use the File Explorer to create the directories and Notepad or other text editor to create the files.
 
-??? tip "Why is there a number in the names?"
+??? question "Why is there a number in the names?"
 
     A major assumption of the OSDF (and the Pelican software that backs it) is that the objects it makes accessible
     are **immutable**, that is, they **do not change**.
@@ -192,7 +192,7 @@ Inside the empty directory, run the following command:
 pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./
 ```
 
-You may be prompted to authenticate, just like you did in the [Download data test](download-data.md#authenticate-upload).
+You may be prompted to authenticate, just like you did in the [Download data test](download-data.md#authenticate-download).
 The download itself should be brief.
 
 ??? tip "In case of errors"

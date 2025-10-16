@@ -117,7 +117,7 @@ https://<issuer_URL_for_your_namespace>/scitokens-server/device?user_code=<some_
 Open the URL in any web browser, even one that is not connected to the device that you are using.
 You'll be directed to a CILogon webpage and prompted to login.
 
-![Login to CILogon in browser](/assets/osdf-upload-cilogon.png)
+![Login to CILogon in browser](assets/osdf-upload-cilogon.png)
 
 Make sure to select the appropriate identity provider for accessing your namespace.
 Typically, this is the same identity provider you used when you registered in COManage.
@@ -135,7 +135,7 @@ For some institutions, the identity provider may recognize your browser session 
 
 Once you've successfully logged in to your identity provider, you will be redirected to a page like this:
 
-![Confirmed login to CILogon in browser](/assets/osdf-upload-cilogon-confirmed.png)
+![Confirmed login to CILogon in browser](assets/osdf-upload-cilogon-confirmed.png)
 
 Now, **return to your terminal**.
 You will be asked for the password to your local configuration file.
