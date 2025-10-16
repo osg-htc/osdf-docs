@@ -1,4 +1,4 @@
-# Managing collaborator access
+# Manage collaborator access
 
 !!! abstract
 
@@ -8,7 +8,7 @@
     In this guide, you'll learn
 
     * how to login to the COmanage registry
-    * how to find the groups controlling your namespace
+    * how to find the groups that grant access to your namespace
     * how to give collaborators access to your namespace
 
 This guide is intended for users who manage a custom namespace in the OSDF,
@@ -88,13 +88,13 @@ On this page, you can see the current list of members of the group and their per
 * A "member" of the group can interact with the namespace as described above.
 * An "owner" of the group can manage the membership of the group and their permissions within COmanage.
 
-## Finding collaborators in COmanage
+## Find collaborators in COmanage
 
 Since your collaborator must be registered with COmanage before you can add them to your group,
 it's a good idea to check and see if they are registered or not!
 
 We suggest searching for your collaborator's email address using the global search.
-Click on the magnifying glass in the top righthand side to open the search bar:
+Click on the magnifying glass (:material-magnify:) in the top righthand side to open the search bar:
 
 ![COmanage: global search text box](assets/comanage-global-search.png)
 
@@ -140,7 +140,7 @@ To do so, send your collaborator an email like the following:
 > 
 > Regards,
 
-After they have registered, confirm that you can [find them in COmanage](#finding-collaborators-in-comanage).
+After they have registered, confirm that you can [find them in COmanage](#find-collaborators-in-comanage).
 Then you can proceed to [add them to your COmanage group](#add-collaborators-to-your-comanage-group).
 
 ## Add collaborators to your COmanage group
@@ -161,4 +161,24 @@ You can further modify their membership as described next.
 
 ## Manage members of your COmanage group
 
+From the [group membership page](#comanage-groups-that-you-manage), you can manage the members of your group and the nature of their membership.
+
+For each member of the group, the row in the table has a pair of checkboxes that show whether the identity is considered a "member" and an "owner". 
+You can check/uncheck these boxes as desired:
+
+* New members that you add will automatically have the "member" box checked.
+* Check the "owner" box to give the member the ability to add other collaborators to this group.
+* If the both the "member" and "owner" box are unchecked, the member will be **removed** from the group.
+
+**The changes to the checkboxes will only be saved when you hit the "SAVE" button at the bottom of the table**.
+
+You can also control *when* the membership is valid. 
+That is, you can set an expiration date.
+To do so, 
+
+1. Click the "Edit" button in the right-most column for the user you want to edit.
+2. Click the entry box for "Valid From" to bring up a calendar prompt; the date you choose will be the start date of the membership.
+    (If you want the membership to start immediately, you can leave this box blank.)
+3. Click the entry box for "Valid Through" to bring up a calendar prompt; the date you choose will be the last day the membership is valid.
+4. Click the "SAVE" button once you are satisfied with the changes. To discard your changes, navigate away from this page.
 
