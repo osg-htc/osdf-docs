@@ -111,7 +111,7 @@ Then enter your collaborator's email address and click the "SEARCH" button (or h
 * If there are **multiple** identities registered with the email, you'll see a list of the identities registered with that email address.
     You will need to choose one of the identities to add to your COmanage group.
 
-??? tip "Multiple identities"
+??? warning "Multiple identities"
 
     Ideally, the COmanage registry is intended to have **one** identity registered per person. 
     In practice, however, there can be several reasons why someone has multiple identities registered. 
