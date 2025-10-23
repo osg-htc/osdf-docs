@@ -123,3 +123,8 @@
   -webkit-mask-image: var(--md-admonition-icon--pro-tip);
           mask-image: var(--md-admonition-icon--pro-tip);
 }
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 15px;
+}
