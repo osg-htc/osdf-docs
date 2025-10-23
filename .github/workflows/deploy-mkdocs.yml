@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Trust Git workspace directory
+        run: git config --global --add safe.directory /github/workspace
       - name: Deploy MkDocs pages
         if: startsWith(github.repository, 'osg-htc/')
         uses: docker://squidfunk/mkdocs-material
