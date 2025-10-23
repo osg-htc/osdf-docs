@@ -62,21 +62,19 @@ You should see something like this:
 
 ![COmanage: list of groups you manage](assets/comanage-group-list.png)
 
-There are up to three groups (per namespace) that you can manage:
+There are up to two groups (per namespace) that you can manage:
 
-* `osstore-NAMESPACE-private-read`
-* `osstore-NAMESPACE-private-rw`
-* `osstore-NAMESPACE-public-rw`
+* `osstore-NAMESPACE-read`
+* `osstore-NAMESPACE-rw`
 
 Membership of these groups in COmanage controls the corresponding permissions that an identity has for interacting with the namespace via the OSDF and Pelican:
 
-* Members of the `private-read` namespace can download objects in the `osdf:///YOUR_NAMESPACE/private` address, but cannot write/upload.
-* Members of the `private-rw` namespace can both download and upload objects in the `osdf:///YOUR_NAMESPACE/private` address.
-* Members of the `public-rw` namespace can upload objects in the `osdf:///YOUR_NAMESPACE/public` address.
+* Members of the `-read` group can download objects in the `osdf:///YOUR_NAMESPACE/` address, but cannot write/upload.
+* Members of the `-rw` group can both download and upload objects in the `osdf:///YOUR_NAMESPACE/` address.
 
 !!! note
 
-    There is not a group for controlling who can download objects from the `osdf:///YOUR_NAMESPACE/public` address, because **anyone** can download objects from that address!
+    If your namespace has public reads enabled, there is not a group for controlling who can download objects from the `osdf:///YOUR_NAMESPACE/public` address, because **anyone** can download objects from that address! So you will only see one group listed instead of two. 
 
 You can see the members of a group by clicking on the "Members" icon for that group's row.
 This will take you to a page like the following:
@@ -105,7 +103,7 @@ Then enter your collaborator's email address and click the "SEARCH" button (or h
 * If there is **no** identity registered with the email, you'll see a mostly empty page with the text "No results found". 
     In this case, you will need to [invite your collaborator](#invite-collaborators-to-join-comanage) to register with COmanage.
 
-* If there is **one** identity registered with the email, you'll be automaticaly redirected to that identity's "CO Person" page.
+* If there is **one** identity registered with the email, you'll be automatically redirected to that identity's "CO Person" page.
     You can now add the collaborator to your COmanage group using this email, following the [instructions below](#add-collaborators-to-your-comanage-group).
 
 * If there are **multiple** identities registered with the email, you'll see a list of the identities registered with that email address.
