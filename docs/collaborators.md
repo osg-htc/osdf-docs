@@ -11,7 +11,7 @@
     * how to find the groups that grant access to your namespace
     * how to give collaborators access to your namespace
 
-This guide is intended for users who manage a custom namespace in the OSDF,
+This guide is intended for users who manage a namespace in the OSDF,
 usually set up in coordination with the OSDF team.
 If you were not directed to this page by a member of the OSDF team,
 the following instructions likely do not apply to you.
@@ -22,7 +22,7 @@ For assistance, consider emailing the OSDF team at <a href="mailto:support@osg-h
 
 This section covers how to login to COmanage.
 These instructions assume that you have registered your identity with COmanage previously,
-which should be the case if you are the manager of a custom namespace.
+which should be the case if you are the manager of a namespace.
 
 1. Go to [registry.cilogon.org](https://registry.cilogon.org).
 
