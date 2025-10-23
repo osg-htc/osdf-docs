@@ -13,7 +13,7 @@ This website contains guides for interacting with a custom namespace in the OSDF
 
 If you are trying to download data from a custom namespace, you should start by learning how to
 
-1. Use [Pelican](https://pelicanplatform.org), the software powering the OSDF. [Guide :material-arrow-right:](pelican-client.md)
+1. Install and use the [Pelican client](https://pelicanplatform.org) [Guide :material-arrow-right:](pelican-client.md)
 1. Download data via the OSDF. [Guide :material-arrow-right:](download-data.md)
 1. Sync your dataset for sharing via the OSDF. [Guide :material-arrow-right:](sync-dataset.md)
 
@@ -21,7 +21,7 @@ If you are trying to download data from a custom namespace, you should start by 
 
 If you are trying to upload data to a custom namespace, you should start by learning how to
 
-1. Use [Pelican](https://pelicanplatform.org), the software powering the OSDF. [Guide :material-arrow-right:](pelican-client.md)
+1. Install and use the [Pelican client](https://pelicanplatform.org), the software powering the OSDF. [Guide :material-arrow-right:](pelican-client.md)
 1. Upload data via the OSDF. [Guide :material-arrow-right:](upload-data.md)
 1. Sync your dataset for sharing via the OSDF. [Guide :material-arrow-right:](sync-dataset.md)
 
