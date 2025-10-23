@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.osdf.osg-htc.org/concepts/">
+      
+      
+        <link rel="prev" href="../collaborators/">
+      
+      
+      
+      <link rel="icon" href="../assets/OSG_Logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Concepts - OSDF Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--halt:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22100.25%22%20height%3D%22100%22%20style%3D%22max-height%3A500px%22%3E%3Cstyle%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%7D%3C/style%3E%3Cpath%20fill%3D%22%23e30909%22%20d%3D%22M99.69%2028.98%2085.35%2014.64%2071.02.31%2070.71%200H29.29l-.31.31-14.34%2014.33L.31%2028.98l-.31.31v41.43l.31.31%2014.34%2014.34%2014.34%2014.34.3.3h41.43l.31-.31%2014.34-14.34%2014.34-14.34.3-.3V29.28l-.32-.3zM97.9%2069.84%2083.87%2083.87%2069.84%2097.9H30.16L16.13%2083.87%202.1%2069.84V30.16l14.03-14.03L30.16%202.1h39.68l14.03%2014.03L97.9%2030.16v39.68z%22%20class%3D%22st0%22/%3E%3Cpath%20fill%3D%22%23e30909%22%20d%3D%22M95.91%2030.98%2082.46%2017.54%2069.02%204.09H30.98L17.54%2017.54%204.09%2030.98v38.04l13.45%2013.45%2013.45%2013.45h38.04l13.45-13.45%2013.45-13.45V30.98zM54.92%2084.84c-11.15.57-19.03-4.79-25.59-13.56L19.07%2057.56a3.751%203.751%200%200%201%205.24-5.26l9.39%206.53c1.32.92%202.43.52%202.43-1.95V21.21c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v22.53c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V17.6c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v26.14c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V21.01c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v22.74c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V28.79c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v32.8c.76%2017.54-6.5%2022.64-18.29%2023.25z%22%20class%3D%22st0%22/%3E%3Ctext%20y%3D%22115%22%20fill%3D%22%23e30909%22%20font-family%3D%22%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial-Unicode%2C%20Arial%2C%20Sans-serif%22%20font-size%3D%225%22%20font-weight%3D%22bold%22%3ECreated%20by%20INDRAWATI%3C/text%3E%3Ctext%20y%3D%22120%22%20fill%3D%22%23e30909%22%20font-family%3D%22%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial-Unicode%2C%20Arial%2C%20Sans-serif%22%20font-size%3D%225%22%20font-weight%3D%22bold%22%3Efrom%20the%20Noun%20Project%3C/text%3E%3C/svg%3E');--md-admonition-icon--pro-tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21.33%2012.91c.09%201.55-.62%203.04-1.89%203.95l.77%201.49c.23.45.26.98.06%201.45-.19.47-.58.84-1.06%201l-.79.25a1.687%201.687%200%200%201-1.86-.55L14.44%2018c-.89-.15-1.73-.53-2.44-1.1-.5.15-1%20.23-1.5.23-.88%200-1.76-.27-2.5-.79-.53.16-1.07.23-1.62.22-.79.01-1.57-.15-2.3-.45a4.1%204.1%200%200%201-2.43-3.61c-.08-.72.04-1.45.35-2.11-.29-.75-.32-1.57-.07-2.33C2.3%207.11%203%206.32%203.87%205.82c.58-1.69%202.21-2.82%204-2.7%201.6-1.5%204.05-1.66%205.83-.37.42-.11.86-.17%201.3-.17%201.36-.03%202.65.57%203.5%201.64%202.04.53%203.5%202.35%203.58%204.47.05%201.11-.25%202.2-.86%203.13.07.36.11.72.11%201.09m-5-1.41c.57.07%201.02.5%201.02%201.07a1%201%200%200%201-1%201h-.63c-.32.9-.88%201.69-1.62%202.29.25.09.51.14.77.21%205.13-.07%204.53-3.2%204.53-3.25a2.59%202.59%200%200%200-2.69-2.49%201%201%200%200%201-1-1%201%201%200%200%201%201-1c1.23.03%202.41.49%203.33%201.3.05-.29.08-.59.08-.89-.06-1.24-.62-2.32-2.87-2.53-1.25-2.96-4.4-1.32-4.4-.4-.03.23.21.72.25.75a1%201%200%200%201%201%201c0%20.55-.45%201-1%201-.53-.02-1.03-.22-1.43-.56-.48.31-1.03.5-1.6.56-.57.05-1.04-.35-1.07-.9a.97.97%200%200%201%20.88-1.1c.16-.02.94-.14.94-.77%200-.66.25-1.29.68-1.79-.92-.25-1.91.08-2.91%201.29C6.75%205%206%205.25%205.45%207.2%204.5%207.67%204%208%203.78%209c1.08-.22%202.19-.13%203.22.25.5.19.78.75.59%201.29-.19.52-.77.78-1.29.59-.73-.32-1.55-.34-2.3-.06-.32.27-.32.83-.32%201.27%200%20.74.37%201.43%201%201.83.53.27%201.12.41%201.71.4q-.225-.39-.39-.81a1.038%201.038%200%200%201%201.96-.68c.4%201.14%201.42%201.92%202.62%202.05%201.37-.07%202.59-.88%203.19-2.13.23-1.38%201.34-1.5%202.56-1.5m2%207.47-.62-1.3-.71.16%201%201.25zm-4.65-8.61a1%201%200%200%200-.91-1.03c-.71-.04-1.4.2-1.93.67-.57.58-.87%201.38-.84%202.19a1%201%200%200%200%201%201c.57%200%201-.45%201-1%200-.27.07-.54.23-.76.12-.1.27-.15.43-.15.55.03%201.02-.38%201.02-.92%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/code-highlight.css">
+    
+      <link rel="stylesheet" href="../stylesheets/osg.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#osdf-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OSDF Documentation" class="md-header__button md-logo" aria-label="OSDF Documentation" data-md-component="logo">
+      
+  <img src="../assets/OSG_Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSDF Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OSDF Documentation" class="md-nav__button md-logo" aria-label="OSDF Documentation" data-md-component="logo">
+      
+  <img src="../assets/OSG_Logo.svg" alt="logo">
+
+    </a>
+    OSDF Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pelican-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Pelican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Upload data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sync your dataset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collaborators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collaborator access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      About namespaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-owns-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who owns a namespace?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-access-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who can access a namespace?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching-and-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching and immutability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching and immutability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a "cache"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-osdf-use-caches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the OSDF use caches?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-immutability-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is "immutability" important?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-i-changed-the-object-what-do-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help, I changed the object! What do I do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-removing-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about removing objects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      About namespaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-owns-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who owns a namespace?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-access-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who can access a namespace?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching-and-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching and immutability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching and immutability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a "cache"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-osdf-use-caches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the OSDF use caches?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-immutability-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is "immutability" important?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-i-changed-the-object-what-do-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help, I changed the object! What do I do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-removing-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about removing objects?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="osdf-concepts">OSDF Concepts<a class="headerlink" href="#osdf-concepts" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>In this guide, you'll learn about the concepts of</p>
+<ul>
+<li>namespaces, including access policies</li>
+<li>caching and immutability</li>
+</ul>
+</div>
+<h2 id="about-namespaces">About namespaces<a class="headerlink" href="#about-namespaces" title="Permanent link">&para;</a></h2>
+<p>Data available via the OSDF is organized by "namespace".
+A namespace represents a set of data connected to the OSDF.</p>
+<h3 id="who-owns-a-namespace">Who owns a namespace?<a class="headerlink" href="#who-owns-a-namespace" title="Permanent link">&para;</a></h3>
+<p>Each namespace has its own set of policies controlling who can access the connected data and how it can be accessed.
+The namespace and its policies are centrally registered when the data storage is connected to the OSDF.
+Furthermore, these policies apply to any connected data that share the same prefix as the namespace.</p>
+<p>For example, the namespace <code>osdf:///pelicanplatform</code> is registered by the Pelican Platform. 
+They therefore control the objects and nested namespaces listed under that prefix.
+A third party cannot register <code>osdf:///pelicanplatform/alternate</code>, since it contains the prefix owned by Pelican Platform.</p>
+<details class="question">
+<summary>What about data ownership?</summary>
+<p>The OSDF and other federations using the Pelican Platform are merely distribution systems: <strong>the data provider maintains ownership of their data</strong> under the data federation model.
+If the data provider limits access to their data to certain users, every component of the federation will respect those limitations.</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Connecting data to the OSDF</p>
+<p>If you have a dataset you want to make available via the OSDF, please reach out! </p>
+<ul>
+<li>You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSdr3pLLRlEbhbf-h8cdZ5N9UJpshIDdgUeHJ07keRUK8ecKOw/viewform?usp=dialog">request a consultation</a>.</li>
+<li>You can email us at <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</li>
+</ul>
+<p>For more information on the OSDF, see this <a href="https://osg-htc.org/services/osdf">overview page</a>.</p>
+</div>
+<h3 id="who-can-access-a-namespace">Who can access a namespace?<a class="headerlink" href="#who-can-access-a-namespace" title="Permanent link">&para;</a></h3>
+<p>Each namespace can be configured with different access policies:</p>
+<ul>
+<li>Public Read - anyone can download the data from this namespace</li>
+<li>Read - only authenticated users can download the data from this namespace</li>
+<li>Write - only authenticated users can upload data to this namespace</li>
+</ul>
+<p>The entity that registered the namespace has control over how users authenticate access.
+For the most part, namespaces in the OSDF use COmanage (for managing access) and CILogon (for authenticating access).</p>
+<div class="admonition tip">
+<p class="admonition-title">What's in a name?</p>
+<p>Typically, the name used for the namespace suggests something about the provenance and accessibility of the data.
+For more information, see the Pelican guide on <a href="https://docs.pelicanplatform.org/federating-your-data/choosing-namespaces">Choosing Namespaces</a>.</p>
+</div>
+<p>If you are the manager of a namespace that was set up in coordination with the OSDF team, you can control access to your namespace following the instructions in the <a href="../collaborators/">Collaborator access guide</a>.</p>
+<h2 id="caching-and-immutability">Caching and immutability<a class="headerlink" href="#caching-and-immutability" title="Permanent link">&para;</a></h2>
+<p>One of the main advantages of using the OSDF is the extensive system of caches geographically distributed across North America and beyond.
+Currently, in order for this system to work, the objects downloaded from the OSDF are assumed to be immutable.</p>
+<h3 id="what-is-a-cache">What is a "cache"?<a class="headerlink" href="#what-is-a-cache" title="Permanent link">&para;</a></h3>
+<p>When data is downloaded from the OSDF, it typically passes through a "cache" before reaching its final destination.
+The cache keeps a copy of that data after the download is completed. 
+That way, the next time someone tries to download the same data, the cache can provide its copy instead of going all the way back to the original storage system.</p>
+<h3 id="why-does-the-osdf-use-caches">Why does the OSDF use caches?<a class="headerlink" href="#why-does-the-osdf-use-caches" title="Permanent link">&para;</a></h3>
+<p>The OSDF was originally designed to support high throughput computing (HTC) workloads.
+An HTC workload could be anywhere from 10 to 1,000,000+ jobs, and typically there is some files common across all jobs.
+If those common files are large, an HTC workload can easily overwhelm the local network where the files are originally stored.</p>
+<p>By using caches, the OSDF can store copies of large files in servers much closer to where the HTC jobs are actually running. 
+These servers are located on internet backbones to ensure high bandwidth.
+When an HTC workload is deployed, the first few downloads of the large file will populate the network of caches.
+Subsequent downloads can then fetch the large file from a cache instead of the original data storage.</p>
+<h3 id="why-is-immutability-important">Why is "immutability" important?<a class="headerlink" href="#why-is-immutability-important" title="Permanent link">&para;</a></h3>
+<p>For this caching system to work, the OSDF assumes that the objects that are downloaded are "immutable" - that is, they do not change.
+That is because when you download an object multiple times from the OSDF, you are typically downloading a copy from one of the caches.</p>
+<p>If the object changes at the original data storage, then the copy stored at the cache no longer matches the object at the original data storage.
+Now when you try to download the object, you may get the old version or the new version.
+This inconsistency currently cannot be accounted for in the OSDF system and can cause problems in your work.</p>
+<div class="admonition warning">
+<p class="admonition-title">Frankenstein's objects</p>
+<p>Because of some technical details with the Pelican software, if the object at the origin changes, then a client downloading the object may receive:</p>
+<ul>
+<li>the older version of the object,</li>
+<li>the new version of the object, or</li>
+<li><strong>some combination of the old object and the new object!</strong></li>
+</ul>
+</div>
+<h3 id="help-i-changed-the-object-what-do-i-do">Help, I changed the object! What do I do?<a class="headerlink" href="#help-i-changed-the-object-what-do-i-do" title="Permanent link">&para;</a></h3>
+<p>If you have to change the object at the origin, we recommend that you change the name of the object as well.
+That way, its OSDF address will differ from any copies that are stored in a cache.</p>
+<p>If you can't change the name of the object, then we recommend that you wait a couple of days before trying to download the object again.
+The copies kept by the caches will be cleaned out in order to make room for other objects that are being downloaded.
+(There currently isn't a mechanism within Pelican to "purge" caches of old copies of objects.)</p>
+<p>If you need help, contact the OSDF team at <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Immutability and the future of Pelican</p>
+<p>A long term goal in the development of the Pelican software is to address this assumption of immutability.
+Eventually, objects in a Pelican data federation will have the concept of versioning, enabling caches to check if the copy they are storing is the most recent version.</p>
+</div>
+<h3 id="what-about-removing-objects">What about removing objects?<a class="headerlink" href="#what-about-removing-objects" title="Permanent link">&para;</a></h3>
+<p>In principle, you can remove an object from the original data storage.
+Any copies on the caches, however, will persist, at least until the cache needs to make room for more recent objects.</p>
+<p>If you need to remove objects from your origin, we recommend contacting the OSDF team for assistance at <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../collaborators/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collaborator access">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Collaborator access
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

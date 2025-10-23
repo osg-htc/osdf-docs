@@ -1,0 +1,900 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.osdf.osg-htc.org/sync-dataset/">
+      
+      
+        <link rel="prev" href="../download-data/">
+      
+      
+        <link rel="next" href="../collaborators/">
+      
+      
+      <link rel="icon" href="../assets/OSG_Logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Sync your dataset - OSDF Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--halt:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22100.25%22%20height%3D%22100%22%20style%3D%22max-height%3A500px%22%3E%3Cstyle%3E.st0%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%7D%3C/style%3E%3Cpath%20fill%3D%22%23e30909%22%20d%3D%22M99.69%2028.98%2085.35%2014.64%2071.02.31%2070.71%200H29.29l-.31.31-14.34%2014.33L.31%2028.98l-.31.31v41.43l.31.31%2014.34%2014.34%2014.34%2014.34.3.3h41.43l.31-.31%2014.34-14.34%2014.34-14.34.3-.3V29.28l-.32-.3zM97.9%2069.84%2083.87%2083.87%2069.84%2097.9H30.16L16.13%2083.87%202.1%2069.84V30.16l14.03-14.03L30.16%202.1h39.68l14.03%2014.03L97.9%2030.16v39.68z%22%20class%3D%22st0%22/%3E%3Cpath%20fill%3D%22%23e30909%22%20d%3D%22M95.91%2030.98%2082.46%2017.54%2069.02%204.09H30.98L17.54%2017.54%204.09%2030.98v38.04l13.45%2013.45%2013.45%2013.45h38.04l13.45-13.45%2013.45-13.45V30.98zM54.92%2084.84c-11.15.57-19.03-4.79-25.59-13.56L19.07%2057.56a3.751%203.751%200%200%201%205.24-5.26l9.39%206.53c1.32.92%202.43.52%202.43-1.95V21.21c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v22.53c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V17.6c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v26.14c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V21.01c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v22.74c0%20.65.53%201.18%201.18%201.18.65%200%201.18-.53%201.18-1.18V28.79c0-2.07%201.68-3.75%203.75-3.75%202.07%200%203.75%201.68%203.75%203.75v32.8c.76%2017.54-6.5%2022.64-18.29%2023.25z%22%20class%3D%22st0%22/%3E%3Ctext%20y%3D%22115%22%20fill%3D%22%23e30909%22%20font-family%3D%22%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial-Unicode%2C%20Arial%2C%20Sans-serif%22%20font-size%3D%225%22%20font-weight%3D%22bold%22%3ECreated%20by%20INDRAWATI%3C/text%3E%3Ctext%20y%3D%22120%22%20fill%3D%22%23e30909%22%20font-family%3D%22%27Helvetica%20Neue%27%2C%20Helvetica%2C%20Arial-Unicode%2C%20Arial%2C%20Sans-serif%22%20font-size%3D%225%22%20font-weight%3D%22bold%22%3Efrom%20the%20Noun%20Project%3C/text%3E%3C/svg%3E');--md-admonition-icon--pro-tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M21.33%2012.91c.09%201.55-.62%203.04-1.89%203.95l.77%201.49c.23.45.26.98.06%201.45-.19.47-.58.84-1.06%201l-.79.25a1.687%201.687%200%200%201-1.86-.55L14.44%2018c-.89-.15-1.73-.53-2.44-1.1-.5.15-1%20.23-1.5.23-.88%200-1.76-.27-2.5-.79-.53.16-1.07.23-1.62.22-.79.01-1.57-.15-2.3-.45a4.1%204.1%200%200%201-2.43-3.61c-.08-.72.04-1.45.35-2.11-.29-.75-.32-1.57-.07-2.33C2.3%207.11%203%206.32%203.87%205.82c.58-1.69%202.21-2.82%204-2.7%201.6-1.5%204.05-1.66%205.83-.37.42-.11.86-.17%201.3-.17%201.36-.03%202.65.57%203.5%201.64%202.04.53%203.5%202.35%203.58%204.47.05%201.11-.25%202.2-.86%203.13.07.36.11.72.11%201.09m-5-1.41c.57.07%201.02.5%201.02%201.07a1%201%200%200%201-1%201h-.63c-.32.9-.88%201.69-1.62%202.29.25.09.51.14.77.21%205.13-.07%204.53-3.2%204.53-3.25a2.59%202.59%200%200%200-2.69-2.49%201%201%200%200%201-1-1%201%201%200%200%201%201-1c1.23.03%202.41.49%203.33%201.3.05-.29.08-.59.08-.89-.06-1.24-.62-2.32-2.87-2.53-1.25-2.96-4.4-1.32-4.4-.4-.03.23.21.72.25.75a1%201%200%200%201%201%201c0%20.55-.45%201-1%201-.53-.02-1.03-.22-1.43-.56-.48.31-1.03.5-1.6.56-.57.05-1.04-.35-1.07-.9a.97.97%200%200%201%20.88-1.1c.16-.02.94-.14.94-.77%200-.66.25-1.29.68-1.79-.92-.25-1.91.08-2.91%201.29C6.75%205%206%205.25%205.45%207.2%204.5%207.67%204%208%203.78%209c1.08-.22%202.19-.13%203.22.25.5.19.78.75.59%201.29-.19.52-.77.78-1.29.59-.73-.32-1.55-.34-2.3-.06-.32.27-.32.83-.32%201.27%200%20.74.37%201.43%201%201.83.53.27%201.12.41%201.71.4q-.225-.39-.39-.81a1.038%201.038%200%200%201%201.96-.68c.4%201.14%201.42%201.92%202.62%202.05%201.37-.07%202.59-.88%203.19-2.13.23-1.38%201.34-1.5%202.56-1.5m2%207.47-.62-1.3-.71.16%201%201.25zm-4.65-8.61a1%201%200%200%200-.91-1.03c-.71-.04-1.4.2-1.93.67-.57.58-.87%201.38-.84%202.19a1%201%200%200%200%201%201c.57%200%201-.45%201-1%200-.27.07-.54.23-.76.12-.1.27-.15.43-.15.55.03%201.02-.38%201.02-.92%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/code-highlight.css">
+    
+      <link rel="stylesheet" href="../stylesheets/osg.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sync-your-dataset-using-osdf" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OSDF Documentation" class="md-header__button md-logo" aria-label="OSDF Documentation" data-md-component="logo">
+      
+  <img src="../assets/OSG_Logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OSDF Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sync your dataset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OSDF Documentation" class="md-nav__button md-logo" aria-label="OSDF Documentation" data-md-component="logo">
+      
+  <img src="../assets/OSG_Logo.svg" alt="logo">
+
+    </a>
+    OSDF Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pelican-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up Pelican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Upload data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sync your dataset
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sync your dataset
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-sync-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The sync command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-sync-command-to-upload-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the sync command to upload data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the sync command to upload data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-test-upload-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup test upload sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-upload-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test upload sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-uploads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm uploads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-sync-command-to-download-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the sync command to download data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the sync command to download data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-test-download-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup test download sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-download-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test download sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collaborators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collaborator access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-sync-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The sync command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-sync-command-to-upload-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the sync command to upload data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the sync command to upload data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-test-upload-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup test upload sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-upload-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test upload sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-uploads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm uploads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-sync-command-to-download-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the sync command to download data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the sync command to download data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-test-download-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup test download sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-download-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test download sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sync-your-dataset-using-osdf">Sync your dataset using OSDF<a class="headerlink" href="#sync-your-dataset-using-osdf" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>In this guide, you'll learn</p>
+<ul>
+<li>how to upload your dataset to the OSDF</li>
+<li>how to download your dataset from the OSDF</li>
+</ul>
+</div>
+<p>This guide assumes that you have installed the Pelican CLI client on your device.
+If you have not, see the <a href="../pelican-client/">Set up Pelican guide</a> for instructions.</p>
+<p>Furthermore, this guide assumes that you have completed one or both of the <a href="../upload-data/">Upload data guide</a> and the <a href="../download-data/">Download data guide</a>.</p>
+<h2 id="the-sync-command">The sync command<a class="headerlink" href="#the-sync-command" title="Permanent link">&para;</a></h2>
+<p>The Pelican client provides the command <code>pelican object sync</code> for handling the transfers of many objects.
+The syntax for the command is:</p>
+<div class="highlight"><pre><span></span><code>pelican object sync &lt;source&gt; &lt;destination&gt;
+</code></pre></div>
+<p>where one of <code>&lt;source&gt;</code> and <code>&lt;destination&gt;</code> is a directory on your local device and the other is the OSDF address you want to sync against.
+These references can be individual objects, but the command is best suited for many objects.</p>
+<p>The sync command will act <strong>recursively</strong>. 
+If uploading a local directory that in turn contains additional directories with files, the whole directory tree will be reproduced under the OSDF address you specified.
+If downloading objects from an OSDF address, the client will download all objects that share the same OSDF address as their prefix.</p>
+<p>If the transfer is interrupted, you can rerun the same <code>pelican object sync</code> command and it will skip objects that were already successfully transferred.</p>
+<h2 id="using-the-sync-command-to-upload-data">Using the sync command to upload data<a class="headerlink" href="#using-the-sync-command-to-upload-data" title="Permanent link">&para;</a></h2>
+<p>If the destination for the <code>pelican object sync</code> command is an OSDF address, then the client will upload the <strong>contents</strong> of the local directory you provided to the corresponding object store.</p>
+<div class="copy highlight"><pre><span></span><code>pelican object sync LOCAL_DIRECTORY osdf:///YOUR_NAMESPACE/some_location
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The emphasis on "contents" is because the name of the local directory will <strong>not</strong> be automatically included in the OSDF address for the objects you upload.
+In this example, that means the OSDF address you choose will not automatically include the name of <code>LOCAL_DIRECTORY</code> in the prefix.</p>
+<p>If you want that name to be included in the prefix, then you need to include it in the OSDF address you specify!</p>
+</div>
+<p>Like with <a href="../upload-data/">uploading a single object</a>, you will need to authenticate your identity to provide the necessary authorization.
+Once authorized, the client will recursively upload the contents of the local directory.</p>
+<p><strong>The sync command will not overwrite existing objects on upload!</strong></p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Currently there is a bug where uploading a directory with object names that already exist at the OSDF address will return a <code>403 forbidden</code> error.
+The client will still attempt to upload any of the new objects it found in the local directory, but even if that is successful the command will overall return the <code>403 forbidden</code> error.</p>
+<p>For updates, see the <a href="https://github.com/PelicanPlatform/pelican/issues/2735">bug report</a>.</p>
+</div>
+<h3 id="setup-test-upload-sync">Setup test upload sync<a class="headerlink" href="#setup-test-upload-sync" title="Permanent link">&para;</a></h3>
+<p>On your local device, create the following directory tree:</p>
+<div class="highlight"><pre><span></span><code>sync-test.01/
+├── nested/
+│   └── nested.txt
+└── test.txt
+</code></pre></div>
+<p>You can recreate this structure by copying and running the following commands (Linux/Mac):</p>
+<div class="copy highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>sync-test.01/nested
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;First file in the sync test&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>sync-test.01/test.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Second file (nested) in the sync test&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>sync-test.01/nested/nested.txt
+</code></pre></div>
+<p>If using Windows PowerShell, use the File Explorer to create the directories and Notepad or other text editor to create the files.</p>
+<details class="question">
+<summary>Why is there a number in the names?</summary>
+<p>A major assumption of the OSDF (and the Pelican software that backs it) is that the objects it makes accessible
+are <strong>immutable</strong>, that is, they <strong>do not change</strong>.</p>
+<p>Here, the number is provided as a way to version the name of the objects. </p>
+<p>To repeat this exercise (after the <code>sync-test.01</code> files have been uploaded), you can just increment the number to try again.</p>
+<p>For more information, see the section on <a href="../concepts/#caching-and-immutability">Caching and immutability</a>.</p>
+</details>
+<p>Next, identify the OSDF address that you want to make the <strong>contents</strong> of the local directory available at. 
+We recommend using <code>osdf:///YOUR_NAMESPACE/test/sync-test.01</code>.</p>
+<h3 id="test-upload-sync">Test upload sync<a class="headerlink" href="#test-upload-sync" title="Permanent link">&para;</a></h3>
+<p>Make sure that your terminal is in the directory that contains the <code>sync-test.01</code> folder.
+Then run</p>
+<div class="copy highlight"><pre><span></span><code>pelican object sync sync-test.01 osdf:///YOUR_NAMESPACE/test/sync-test.01
+</code></pre></div>
+<p>Remember that the <code>sync</code> command will upload the <strong>contents</strong> of the local directory - if you want to have the local directory name <code>sync-test.01</code> in the final OSDF address, then you need to include it in the OSDF address you are uploading to.</p>
+<p>You will be prompted to authenticate, just like you did in the <a href="../upload-data/#authenticate-upload">Upload data test</a>.
+Once you've secured the necessary authorization, the upload should be brief.</p>
+<details class="tip">
+<summary>In case of errors</summary>
+<p>If the upload of one of the objects encounters an error, the corresponding error message should be printed and in most cases the client will continue with uploading the other remaining objects.</p>
+<p>If you try the sync command again, it should skip the objects that were successfully uploaded.</p>
+<p>For assistance in troubleshooting an error, consider reaching out to <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
+</details>
+<h3 id="confirm-uploads">Confirm uploads<a class="headerlink" href="#confirm-uploads" title="Permanent link">&para;</a></h3>
+<p>To confirm that the upload was successful, check that the objects can now be listed.</p>
+<p>First, run this command to check the available objects under the OSDF address you provided for the sync command:</p>
+<div class="copy highlight"><pre><span></span><code>pelican object ls -l osdf:///YOUR_NAMESPACE/test/sync-test.01
+</code></pre></div>
+<p>You should see two new items in this listing: <code>test.txt</code> and <code>nested</code>.
+If there are no other objects under your <code>test</code> prefix, the output would look like this:</p>
+<div class="highlight"><pre><span></span><code>/YOUR_NAMESPACE/test/sync-test.01/nested      0   2025-10-10 21:10:32
+/YOUR_NAMESPACE/test/sync-test.01/test.txt   28   2025-10-10 21:10:32
+</code></pre></div>
+<p>The entry for <code>nested</code> lists 0 bytes (middle column), which is an indication that this is not an object but rather an extension of the OSDF address.
+Take a look at the objects available under the nested address with </p>
+<div class="copy highlight"><pre><span></span><code>pelican object ls -l osdf:///YOUR_NAMESPACE/test/sync-test.01/nested
+</code></pre></div>
+<p>This time, you should only see one entry listed corresponding to <code>nested.txt</code>:</p>
+<div class="highlight"><pre><span></span><code>/YOUR_NAMESPACE/test/sync-test.01/nested/nested.txt   34   2025-10-10 21:10:32
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To further confirm that your data was successfully synced to the remote object store in the OSDF, follow the instructions in the next section to download the objects and inspect their contents.</p>
+</div>
+<h2 id="using-the-sync-command-to-download-data">Using the sync command to download data<a class="headerlink" href="#using-the-sync-command-to-download-data" title="Permanent link">&para;</a></h2>
+<p>If the source is an OSDF address, then the client will download all objects that share the same OSDF prefix as the address to the local destination that you specified.
+This will reproduce directories in the local file system that corresponds to the nesting of the object addresses.</p>
+<div class="copy highlight"><pre><span></span><code>pelican object sync osdf:///YOUR_NAMESPACE/some_prefix NEW_LOCAL_DIRECTORY
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Careful!</p>
+<p>The sync command will <strong>overwrite</strong> any local objects that have the <strong>same name</strong> but <strong>different contents</strong> when downloading!</p>
+<p>Local objects with different names will be unaffected, even if inside of a sub-directory created by the sync command.</p>
+</div>
+<p>Like with <a href="../download-data/">downloading a single object</a>, the OSDF address you are trying to access may require that you authenticate your identity to provide the necessary authorization for downloading the data.</p>
+<h3 id="setup-test-download-sync">Setup test download sync<a class="headerlink" href="#setup-test-download-sync" title="Permanent link">&para;</a></h3>
+<p>On your local device, create a new empty directory and move into it:</p>
+<div class="copy highlight"><pre><span></span><code>mkdir sync-download-test
+cd sync-download-test
+</code></pre></div>
+<p>The instructions below assume that the namespace has the addresses created in the <a href="#using-the-sync-command-to-upload-data">section above</a>: <code>osdf:///YOUR_NAMESPACE/test/sync-test.01</code>.</p>
+<p><strong>If your namespace does not have this address</strong>, then </p>
+<ul>
+<li>
+<p>If you have upload permissions, we recommend that you first complete the <a href="#using-the-sync-command-to-upload-data">exercises above</a>!</p>
+</li>
+<li>
+<p>If you do <strong>not</strong> have upload permissions, we recommend that you first finish reading this guide.
+  Then try to apply your understanding to a "small" sync of data from your namespace.</p>
+</li>
+</ul>
+<h3 id="test-download-sync">Test download sync<a class="headerlink" href="#test-download-sync" title="Permanent link">&para;</a></h3>
+<p>Inside the empty directory, run the following command: </p>
+<div class="copy highlight"><pre><span></span><code>pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./
+</code></pre></div>
+<p>You may be prompted to authenticate, just like you did in the <a href="../download-data/#authenticate-download">Download data test</a>.
+The download itself should be brief.</p>
+<details class="tip">
+<summary>In case of errors</summary>
+<p>If the download of one of the objects encounters an error, the corresponding error message should be printed and in most cases the client will continue with download the other remaining objects.</p>
+<p>If you try the sync command again, it should skip the objects that were successfully downloaded.</p>
+<p>For assistance in troubleshooting an error, consider reaching out to <a href="mailto:support@osg-htc.org">support@osg-htc.org</a>.</p>
+</details>
+<h3 id="confirm-downloads">Confirm downloads<a class="headerlink" href="#confirm-downloads" title="Permanent link">&para;</a></h3>
+<p>After the <code>sync</code> command finishes, list the contents of your current directory with</p>
+<div class="copy highlight"><pre><span></span><code>ls
+</code></pre></div>
+<p>You should see the file <code>test.txt</code> and a directory <code>nested</code>. 
+Again, this is because the <code>sync</code> command transfers the <strong>contents</strong> of the address you specified.</p>
+<details class="tip">
+<summary>Creating <code>sync-test.01</code></summary>
+<p>If you want the sync command to put the contents into a new local directory <code>sync-test.01</code>, then you can use this command instead:</p>
+<div class="copy highlight"><pre><span></span><code>pelican object sync osdf:///YOUR_NAMESPACE/test/sync-test.01 ./sync-test.01
+</code></pre></div>
+</details>
+<p>Using your terminal or your device's file explore, confirm that the <code>sync</code> command created the following structure, files, and contents:</p>
+<div class="highlight"><pre><span></span><code>./
+├── nested/
+│   └── nested.txt   # Contains &quot;First file in the sync test&quot;
+└── test.txt         # Contains &quot;Second file (nested) in the sync test&quot;
+</code></pre></div>
+<details class="example">
+<summary>Overwriting local objects</summary>
+<p>As warned above, the sync command will overwrite any local objects with the same name/path as the object you are downloading.
+To see this in action, try the following:</p>
+<ol>
+<li>Edit the contents of <code>sync-download-test/test.txt</code>  using your terminal or device's text editor.</li>
+<li>Create or copy files to <code>sync-download-test/test2.txt</code> and <code>sync-download-test/nested/nested2.txt</code>.</li>
+<li>In the parent <code>sync-download-test</code> directory, rerun the same <code>pelican object sync</code> command that you did in <a href="#test-download-sync">Test download sync</a>.</li>
+</ol>
+<p>Now check the results:</p>
+<ul>
+<li>Did your changes to <code>test.txt</code> persist?</li>
+<li>Were your new files <code>test2.txt</code> and <code>nested2.txt</code> affected?</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../download-data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Download data">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Download data
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../collaborators/" class="md-footer__link md-footer__link--next" aria-label="Next: Collaborator access">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Collaborator access
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

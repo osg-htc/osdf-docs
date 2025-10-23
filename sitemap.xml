@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/collaborators/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/concepts/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/download-data/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/pelican-client/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/sync-dataset/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.osdf.osg-htc.org/upload-data/</loc>
+         <lastmod>2025-10-23</lastmod>
+    </url>
+</urlset>
