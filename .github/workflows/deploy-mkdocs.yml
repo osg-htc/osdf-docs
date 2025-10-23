@@ -1,21 +1,29 @@
-name: Deploy static MkDocs pages
+name: ci
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - master
+      - main
+permissions:
+  contents: write
 jobs:
-  deploy-mkdocs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
-      - name: Trust Git workspace directory
-        run: git config --global --add safe.directory /github/workspace
-      - name: Deploy MkDocs pages
-        if: startsWith(github.repository, 'osg-htc/')
-        uses: docker://squidfunk/mkdocs-material
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
         with:
-          args: >-
-            gh-deploy
-            --verbose
+          key: mkdocs-material-${{ env.cache_id }}
+          path: ~/.cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
